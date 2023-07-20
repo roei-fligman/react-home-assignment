@@ -1,0 +1,20 @@
+.footer {
+    $border: 1px solid #f0abfc4d;
+    height: 54px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 4px 4px;
+    border-right: $border;
+    border-bottom: $border;
+    border-left: $border;
+    background-color: #FFF;
+
+    .actions {
+        width: 528px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+    }
+}

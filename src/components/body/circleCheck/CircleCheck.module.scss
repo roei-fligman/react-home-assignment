@@ -1,0 +1,16 @@
+.circleCheck {
+    $size: 17.6px;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    border: 1.2px #69727d solid;
+    background-color: #fff;
+
+    &.choose {
+        $size: 20px;
+        height: $size;
+        width: $size;
+        background-color: #f0abfc;
+        border: none;
+    }
+}
