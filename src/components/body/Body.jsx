@@ -9,7 +9,7 @@ const Body = (props) => {
 
   return (
     <div className={classNames(style.body, { [style.loader]: loader })}>
-      {loader ? <Loader /> :
+      {props.finish ? <span className={style.finish}>finished!!!</span> : loader ? <Loader /> :
         props.stages.map((stage, index) =>
           <div className={style.row} key={index}>
             <div className={style.label}>
