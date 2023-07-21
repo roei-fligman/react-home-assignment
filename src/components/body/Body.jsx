@@ -19,9 +19,9 @@ const Body = () => {
               <CircleCheck choose={mapIndex < index} />
               {stage.label}
             </div>
-            <div className={style.link} onClick={() => stage.link?.url && window.open(stage.link?.url)}>
+            <a className={style.link} href={stage.link?.url}>
               {stage.link?.text}
-            </div>
+            </a>
           </div>
         )
       }

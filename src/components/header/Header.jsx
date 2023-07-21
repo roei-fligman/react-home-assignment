@@ -12,7 +12,7 @@ const Header = () => {
 
   useEffect(() => {
     if (stageCount !== undefined && index !== undefined) {
-      setProgressWidth(progressLineRef.current.offsetWidth / stageCount * index || 0);
+      setProgressWidth(`${index / stageCount * 100}%` || 0);
     }
   }, [index, stageCount]);
 
