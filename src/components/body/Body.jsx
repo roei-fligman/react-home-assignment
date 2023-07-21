@@ -12,7 +12,7 @@ const Body = () => {
 
   return (
     <div className={classNames(style.body, { [style.loader]: loader })}>
-      {finish ? <span className={style.finish}>finished!!!</span> : loader ? <Loader /> :
+      {finish ? <span className={style.finish}>Congratulations! You've build your own site.</span> : loader ? <Loader /> :
         stagesToShow.map((stage, mapIndex) =>
           <div className={style.row} key={mapIndex}>
             <div className={style.label}>
