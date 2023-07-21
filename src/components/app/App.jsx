@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import style from './App.module.scss';
 import Header from '../header/Header';
 import Body from '../body/Body';
@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 import axios from 'axios';
 
 const STAGES = 11;
+export const Context = createContext();
 
 const App = () => {
   const [stages, setStages] = useState([]);
@@ -22,13 +23,13 @@ const App = () => {
   }, []);
 
   return (
-    <div className={style.appContainer}>
+    <Context.Provider value={{ index, finish, stagesToShow, stagesLength: stages.length }}>
       <div className={style.app}>
-        <Header number={index} count={stagesToShow.length} stagesLength={stages.length} finish={finish} />
-        <Body stages={stagesToShow} index={index} finish={finish} />
-        <Footer disabled={!stages.length} index={index} setIndex={setIndex} step={step} setStep={setStep} finish={finish} count={stagesToShow.length} />
+        <Header />
+        <Body />
+        <Footer setIndex={setIndex} step={step} setStep={setStep} />
       </div>
-    </div>
+    </Context.Provider>
   );
 };
 
