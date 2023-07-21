@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const Button = (props) => {
   return (
-    <div className={classNames(style.button, { [style.disabled]: props.disabled })} onClick={props.onClick}>
+    <div className={classNames(style.button, { [style.disabled]: props.disabled })} onClick={() => !props.disabled && props.onClick()}>
       <span className={style.text}>{props.text}</span>
     </div>
   );

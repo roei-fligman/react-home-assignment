@@ -10,10 +10,10 @@ const Body = (props) => {
   return (
     <div className={classNames(style.body, { [style.loader]: loader })}>
       {loader ? <Loader /> :
-        props.stages.map(stage =>
-          <div className={style.row} key={stage.row}>
+        props.stages.map((stage, index) =>
+          <div className={style.row} key={index}>
             <div className={style.label}>
-              <CircleCheck choose={true} />
+              <CircleCheck choose={index < props.index} />
               {stage.label}
             </div>
             <div className={style.link} onClick={() => stage.link?.url && window.open(stage.link?.url)}>
