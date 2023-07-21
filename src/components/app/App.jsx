@@ -5,6 +5,7 @@ import Body from '../body/Body';
 import Footer from '../footer/Footer';
 import axios from 'axios';
 
+const API_URL = "https://run.mocky.io/v3/59fe4372-8bb0-4de5-97d4-2fae5dd6c9e5";
 const STAGES = 11;
 export const Context = createContext();
 
@@ -17,9 +18,7 @@ const App = () => {
   const finish = step && step === stages.length;
 
   useEffect(() => {
-    axios.get(`https://run.mocky.io/v3/59fe4372-8bb0-4de5-97d4-2fae5dd6c9e5`).then((res) => {
-      setStages(res.data);
-    });
+    axios.get(API_URL).then((res) => setStages(res.data));
   }, []);
 
   return (
