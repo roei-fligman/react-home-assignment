@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# React Home Assignment
 
 Project build your own site.
 
