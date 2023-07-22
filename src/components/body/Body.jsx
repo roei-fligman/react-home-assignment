@@ -19,7 +19,7 @@ const Body = () => {
               <CircleCheck choose={mapIndex < index} />
               {stage.label}
             </div>
-            <a className={style.link} href={stage.link?.url}>
+            <a className={style.link} href={stage.link?.url} target="_blank" rel="noreferrer">
               {stage.link?.text}
             </a>
           </div>
