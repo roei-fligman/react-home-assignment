@@ -1,23 +1,17 @@
 .button {
     height: 28px;
     width: 88px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border-width: 0;
     border-radius: 4px;
     background-color: #F0ABFC;
+    color: #0C0D0E;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
     cursor: pointer;
 
     &.disabled {
         opacity: 0.5;
         cursor: default;
-    }
-
-    .text {
-        color: #0C0D0E;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: bold;
     }
 }
